@@ -2101,6 +2101,12 @@ ul.actions li:first-child {
 	font-size: 6em;
 }
 
+/* architecture */
+#architecture {
+	margin-top: 6em;
+}
+
+
 /* Wrappers */
 
 .wrapper {
