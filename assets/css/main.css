@@ -2104,6 +2104,11 @@ ul.actions li:first-child {
 /* architecture */
 #architecture {
 	margin-top: 6em;
+
+}
+
+#architecture img {
+	max-width: calc(100% - 2rem);
 }
 
 
