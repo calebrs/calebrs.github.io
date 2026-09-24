@@ -16,6 +16,80 @@
 	<meta property='og:url' content='https://calebrs.github.io/' />
 	<link rel="stylesheet" href="assets/css/main.css" />
 
+	<!-- Custom CSS Fixes for Equal Height Cards & Uniform Image Sizing -->
+    <style>
+        
+        /* Ensure row columns stretch to equal height */
+        #gis-work .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        #gis-work .row > [class*="col-"] {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2em; /* Spacing between rows */
+        }
+
+        /* Card container styled like Miniport .box.style2 */
+        #gis-work .box.style2 {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 1.5em;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            overflow: hidden;
+        }
+
+        #gis-work .box.style2:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Uniform Image Aspect Ratio & Cover Crop */
+        #gis-work .box.style2 .image.featured {
+            display: block;
+            width: 100%;
+            height: 200px; /* Fixed height for image area */
+            margin: -1.5em -1.5em 1.25em -1.5em; /* Span full width of box header */
+            position: relative;
+            overflow: hidden;
+            background-color: #f3f4f6;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        #gis-work .box.style2 .image.featured img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Crops image neatly without stretching */
+            object-position: center;
+            display: block;
+        }
+
+        /* Typography & Card Text Content Alignment */
+        #gis-work .box.style2 h3 {
+            font-size: 1.25em;
+            font-weight: 700;
+            margin: 0.25em 0 0.5em 0;
+            color: #2e3842;
+        }
+
+        #gis-work .box.style2 p {
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #636e72;
+            margin-bottom: 0;
+            flex-grow: 1; /* Pushes content evenly */
+        }
+    </style>
+
 </head>
 
 <body class="is-preload">
